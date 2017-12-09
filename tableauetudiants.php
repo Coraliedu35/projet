@@ -20,21 +20,6 @@
         <header> IUT de Saint-Malo </header>
         <img src="logo2.jpg" title="logo2" /> 
         <h1>Feuille d'absence</h1>
-        <?php
-        $reponse = $bdd->query('SELECT * FROM bdd_promo.etudiant');                                  //On récupère le contenu du tableau etudiant de la bdd
-        while ($donnees = $reponse->fetch())
-        {
-        ?>
-            <p>
-            <strong>Nom</strong> : <?php echo $donnees['Nom']; ?><br />
-            Prénom : <?php echo $donnees['Prénom']; ?>, est du groupe <?php echo $donnees['Groupe']; ?><br />
-           </p>
-        <?php
-        }
-
-        $reponse->closeCursor(); // Termine le traitement de la requête
-
-        ?>
         <table align="center">
             <thead>
                 <tr>
