@@ -33,7 +33,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td colspan="4" ="4">Groupe 1</td>
+                    <td colspan="5" ="5">Groupe 1</td>
                 </tr>
                 <?php
                 $reponse = $bdd->query('SELECT * FROM bdd_promo.etudiant ORDER BY Nom');                                  //On récupère le contenu du tableau etudiant de la bdd
@@ -53,7 +53,7 @@
                 $reponse->closeCursor(); // Termine le traitement de la requête
                 ?>
                  <tr>
-                    <td colspan="4" ="4">Groupe 2</td>
+                    <td colspan="5" ="5">Groupe 2</td>
                 </tr>
                 <?php
                 $reponse = $bdd->query('SELECT * FROM bdd_promo.etudiant WHERE Groupe=2 ORDER BY Nom');                                  //On récupère le contenu du tableau etudiant de la bdd
