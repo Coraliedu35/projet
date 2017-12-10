@@ -35,7 +35,7 @@
                     <td colspan="4" ="4">Groupe 1</td>
                 </tr>
                 <?php
-                $reponse = $bdd->query('SELECT * FROM bdd_promo.etudiant');                                  //On récupère le contenu du tableau etudiant de la bdd
+                $reponse = $bdd->query('SELECT * FROM bdd_promo.etudiant ORDER BY Nom');                                  //On récupère le contenu du tableau etudiant de la bdd
                 while ($donnees = $reponse->fetch())
                 {
                 ?>
