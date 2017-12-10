@@ -51,7 +51,26 @@
 
                 $reponse->closeCursor(); // Termine le traitement de la requête
                 ?>
+                 <tr>
+                    <td colspan="4" ="4">Groupe 2</td>
+                </tr>
+                <?php
+                $reponse = $bdd->query('SELECT * FROM bdd_promo.etudiant WHERE Groupe=2 ORDER BY Nom');                                  //On récupère le contenu du tableau etudiant de la bdd
+                while ($donnees = $reponse->fetch())
+                {
+                ?>
+                <tr>
+                    <td><?php echo $donnees['Nom']; ?></td>
+                    <td><?php echo $donnees['Prénom']; ?></td>
+                    <td>Photo</td>
+                    <td>XXX</td>
+                    <td><?php echo $donnees['Groupe']; ?></td>
+                </tr>
+                <?php
+                }
 
+                $reponse->closeCursor(); // Termine le traitement de la requête
+                ?>
             </tbody>
         </table>
 
