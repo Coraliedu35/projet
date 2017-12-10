@@ -97,7 +97,7 @@ INSERT INTO `etudiant` (`Nom`, `Prénom`, `n°etudiant`, `MDP`, `Groupe`, `Nb ab
 ('Talio', 'Romain', NULL, NULL, 1, NULL, NULL, NULL),
 ('Termet', 'Mathieu', NULL, NULL, 1, NULL, NULL, NULL),
 ('Trinquart', 'Kilian', NULL, NULL, 1, NULL, NULL, NULL),
-('Vetele', 'Ewen', NULL, NULL, 1, NULL, NULL, NULL);
+('Vetele', 'Ewen', NULL, NULL, 2, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
