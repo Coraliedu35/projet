@@ -28,15 +28,14 @@
                     <td>Prénom</td>
                     <td>Photo</td>
                     <td>Présence de la personne</td>
-                    <td>Groupe</td>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td colspan="5" ="5">Groupe 1</td>
+                    <td colspan="4" ="4">Groupe 1</td>
                 </tr>
                 <?php
-                $reponse = $bdd->query('SELECT * FROM bdd_promo.etudiant ORDER BY Nom');                                  //On récupère le contenu du tableau etudiant de la bdd
+                $reponse = $bdd->query('SELECT * FROM bdd_promo.etudiant WHERE Groupe=1 ORDER BY Nom');                                  //On récupère le contenu du tableau etudiant de la bdd
                 while ($donnees = $reponse->fetch())
                 {
                 ?>
@@ -53,7 +52,7 @@
                 $reponse->closeCursor(); // Termine le traitement de la requête
                 ?>
                  <tr>
-                    <td colspan="5" ="5">Groupe 2</td>
+                    <td colspan="4" ="4">Groupe 2</td>
                 </tr>
                 <?php
                 $reponse = $bdd->query('SELECT * FROM bdd_promo.etudiant WHERE Groupe=2 ORDER BY Nom');                                  //On récupère le contenu du tableau etudiant de la bdd
