@@ -1,3 +1,6 @@
+<?php
+session_start (); // on démarre la session
+?>
 <!DOCTYPE html>
 
 <html>
@@ -14,7 +17,7 @@
     ?>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="projet_final.css" />
+        <link rel="stylesheet" href="style.css" />
         <title>Absence</title>
     </head>
     <body>
