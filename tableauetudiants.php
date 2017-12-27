@@ -42,7 +42,7 @@
                 <tr>
                     <td><?php echo $donnees['Nom']; ?></td>
                     <td><?php echo $donnees['Prénom']; ?></td>
-                    <td>Photo</td>
+                    <td><img src="trombi/<?php echo $donnees['photo']; ?>.png"/></td>
                     <td>XXX</td>
                     <td><?php echo $donnees['Groupe']; ?></td>
                 </tr>
@@ -62,7 +62,7 @@
                 <tr>
                     <td><?php echo $donnees['Nom']; ?></td>
                     <td><?php echo $donnees['Prénom']; ?></td>
-                    <td>Photo</td>
+                    <td><img src="trombi/<?php echo $donnees['photo']; ?>.png"/></td>
                     <td>XXX</td>
                     <td><?php echo $donnees['Groupe']; ?></td>
                 </tr>
@@ -73,7 +73,10 @@
                 ?>
             </tbody>
         </table>
-
+        <!--bouton de déconnexion : voir à créer un pop-up "êtes-vous sûr"-->
+        <form method="POST" action="accueil.php">
+            <input type="submit" value="déconnexion" />
+        </form>
 
     </body>
 
