@@ -44,7 +44,6 @@
                     <td><?php echo $donnees['Prénom']; ?></td>
                     <td><img src="trombi/<?php echo $donnees['photo']; ?>.png"/></td>
                     <td>XXX</td>
-                    <td><?php echo $donnees['Groupe']; ?></td>
                 </tr>
                 <?php
                 }
@@ -64,7 +63,6 @@
                     <td><?php echo $donnees['Prénom']; ?></td>
                     <td><img src="trombi/<?php echo $donnees['photo']; ?>.png"/></td>
                     <td>XXX</td>
-                    <td><?php echo $donnees['Groupe']; ?></td>
                 </tr>
                 <?php
                 }
