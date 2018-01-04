@@ -14,12 +14,11 @@
     ?>
     <head>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="projet_final.css" />
+        <link rel="stylesheet" href="style.css" />
         <title>Absence</title>
     </head>
     <body>
         <header> IUT de Saint-Malo </header>
-        <img src="logo2.jpg" title="logo2" /> 
         <h1>Feuille d'absence</h1>
         <table align="center">
             <thead>
@@ -72,9 +71,10 @@
             </tbody>
         </table>
         <!--bouton de déconnexion : voir à créer un pop-up "êtes-vous sûr"-->
-        <form method="POST" action="accueil.php">
+       <form method="POST" action="accueil.php">
             <input type="submit" value="déconnexion" />
         </form>
+        <form method="POST" action="faq.html"><input type="submit" value="FAQ" /></form>
 
     </body>
 
