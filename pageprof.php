@@ -24,7 +24,7 @@
     <body>
         <header> IUT de Saint-Malo </header>
         <h1>Feuille d'absence</h1>
-        <p><a href="absents.php">Trombi des étudiants manquants</a></p>
+        <h4><a href="absents.php">Trombi des étudiants manquants</a></h4>
         <table align="center">
             <thead>
                 <tr>
