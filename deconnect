@@ -1,0 +1,8 @@
+<?php
+mysql_query("DELETE FROM connectes WHERE connectes_id = ".$_SESSION['login']) or exit(mysql_error());
+vider_cookie();
+session_destroy();
+$informations = Array(false,,'deconnexion','Vous êtes à présent déconnecté.',
+                header('location: connect.php'));
+exit();
+?>
