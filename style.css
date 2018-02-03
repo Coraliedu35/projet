@@ -39,3 +39,6 @@ img[title="logo2"]{
 	height:90px;
 	float:right;
 }
+
+td li{display:none;}
+td:hover li{display:block;}
