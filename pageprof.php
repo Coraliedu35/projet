@@ -44,10 +44,15 @@
                 {
                 ?>
                 <tr>
-                    <td><?php echo $donnees['Nom']; ?></td>
+                    <td><?php echo $donnees['Nom']; ?>
+                        <li>
+                            <ul>nombre d'absences justifiées : <?php echo $donnees['Nb absences J']; ?></ul>
+                            <ul>nombre d'absences injustifiées : <?php echo $donnees['Nb absences NJ']; ?></ul>
+                        </li>                        
+                    </td>
                     <td><?php echo $donnees['Prénom']; ?></td>
                     <td><img src="trombi/<?php echo $donnees['photo']; ?>.png"/></td>
-                    <td>XXX</td>
+                    <td><input type="checkbox" name="absent" id="absent" /></td>
                 </tr>
                 <?php
                 }
@@ -63,10 +68,15 @@
                 {
                 ?>
                 <tr>
-                    <td><?php echo $donnees['Nom']; ?></td>
+                    <td><?php echo $donnees['Nom']; ?>
+                        <li>
+                            <ul>nombre d'absences justifiées : <?php echo $donnees['Nb absences J']; ?></ul>
+                            <ul>nombre d'absences injustifiées : <?php echo $donnees['Nb absences NJ']; ?></ul>
+                        </li>                    
+                    </td>
                     <td><?php echo $donnees['Prénom']; ?></td>
                     <td><img src="trombi/<?php echo $donnees['photo']; ?>.png"/></td>
-                    <td>XXX</td>
+                    <td><input type="checkbox" name="absent" id="absent" /></td>
                 </tr>
                 <?php
                 }
@@ -75,6 +85,7 @@
                 ?>
             </tbody>
         </table>
+        <form method="POST" action="verif.php"><input type="submit" value="envoyer" /></form>        
         <!--bouton de déconnexion : voir à créer un pop-up "êtes-vous sûr"-->
        <form method="POST" action="accueil.php">
             <input type="submit" value="déconnexion" />
