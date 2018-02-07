@@ -41,9 +41,9 @@
                 {
                 ?>
                 <tr>
-                    <td><?php echo $donnees['Nb absences J']; ?></td>
-                    <td><?php echo $donnees['Nb absences NJ']; ?></td>
-                    <td><?php echo $donnees['Nb absences NJ']+$donnees['Nb absences J']; ?></td>
+                    <td><?php echo $donnees['absencesJ']; ?></td>
+                    <td><?php echo $donnees['absencesNJ']; ?></td>
+                    <td><?php echo $donnees['absencesNJ']+$donnees['absencesJ']; ?></td>
                 </tr>
                 <?php
                 }
