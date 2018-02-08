@@ -1,6 +1,15 @@
 <?php
-session_start (); // on démarre la session
-?>
+    session_start(); // on démarre la session
+    if(empty($_SESSION['essais'])) 
+    {
+        $_SESSION['essais'] = 0;
+    }
+    else if($_SESSION['essais'] > 3) 
+    {        
+        exit('trop de tentatives');
+    }   
+    echo $_SESSION['essais']; //debug
+    ?>
 <!DOCTYPE html>
 <html>
     <head>
