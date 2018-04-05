@@ -2,36 +2,39 @@
     session_start();
 ?>
 
-*<!DOCTYPE html>
+
+<!DOCTYPE html>
 
 <html>
-    <?php
-    try
-    {
-    $bdd = new PDO('mysql:host=localhost;dbname=bdd_promo;charset=utf8', 'root', '',
-    array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));                                    //lien avec la base de données
-    }
-    catch (Exception $e)                                                                    //en cas d'erreur on arrête la page
-    {
-            die('Erreur : ' . $e->getMessage());
-    }
-    ?>
-    <head>
+     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <title>Absence</title>
     </head>
+    <?php
+        include('bdd_connect.php');
+    ?>
     <body>
         <header> IUT de Saint-Malo </header>
+        <!--<img src="logo2.jpg" title="logo2" /> -->
         <h1>Feuille d'absence</h1>
-        <h4><a href="absents.php">Trombi des étudiants manquants</a></h4>
+        <h4><a href="trombi-etudiant.php">Trombi des étudiants manquants</a></h4>
+        <form method="POST" action="verif.php">
+            <a href="qrcode.php">Lien QR </a>
         <table align="center">
             <thead>
+                <tr>
+                    <td colspan="4"="4">Promotion</td>
+                </tr>
+                <tr>
+                    <td colspan="4"="4>FI1A</td>
+                </tr>
                 <tr>
                     <td>Nom</td>
                     <td>Prénom</td>
                     <td>Photo</td>
-                    <td>Présence de la personne</td>
+                    <td>Présence</td>
                 </tr>
             </thead>
             <tbody>
@@ -39,59 +42,61 @@
                     <td colspan="4" ="4">Groupe 1</td>
                 </tr>
                 <?php
-                $reponse = $bdd->query('SELECT * FROM bdd_promo.etudiant WHERE Groupe=1 ORDER BY Nom');                                  //On récupère le contenu du tableau etudiant de la bdd
-                while ($donnees = $reponse->fetch())
+                $reponse = mysqli_query($bdd,'SELECT * FROM etudiant WHERE Groupe=1 ORDER BY Nom');                                  //On récupère le contenu du tableau etudiant de la bdd
+                while ($res = mysqli_fetch_assoc($reponse))
                 {
+
                 ?>
                 <tr>
-                    <td><?php echo $donnees['Nom']; ?>
+                    <td><?php echo $res['Nom']; ?>
                         <li>
-                            <ul>nombre d'absences justifiées : <?php echo $donnees['Nb absences J']; ?></ul>
-                            <ul>nombre d'absences injustifiées : <?php echo $donnees['Nb absences NJ']; ?></ul>
-                        </li>                        
+                            <ul>nombre d'absences justifiées : <?php echo $res['absencesJ']; ?></ul>
+                            <ul>nombre d'absences injustifiées : <?php echo $res['absencesNJ']; ?></ul>
+                        </li>
                     </td>
-                    <td><?php echo $donnees['Prénom']; ?></td>
-                    <td><img src="trombi/<?php echo $donnees['photo']; ?>.png"/></td>
-                    <td><input type="checkbox" name="absent" id="absent" /></td>
+                    <td><?php echo $res['prenom']; ?></td>
+                    <td><img src="trombi/<?php echo $res['photo']; ?>.png" title="trombi"/></td>
+                    <td>
+                        <input type="checkbox" name="absent" id="absent" />
+                    </td>
                 </tr>
                 <?php
                 }
-
-                $reponse->closeCursor(); // Termine le traitement de la requête
                 ?>
-                 <tr>
+                <tr>
                     <td colspan="4" ="4">Groupe 2</td>
                 </tr>
                 <?php
-                $reponse = $bdd->query('SELECT * FROM bdd_promo.etudiant WHERE Groupe=2 ORDER BY Nom');                                  //On récupère le contenu du tableau etudiant de la bdd
-                while ($donnees = $reponse->fetch())
+                $reponse = mysqli_query($bdd,'SELECT * FROM etudiant WHERE Groupe=2 ORDER BY Nom');                                  //On récupère le contenu du tableau etudiant de la bdd
+                while ($res = mysqli_fetch_assoc($reponse))
                 {
                 ?>
                 <tr>
-                    <td><?php echo $donnees['Nom']; ?>
-                        <li>
-                            <ul>nombre d'absences justifiées : <?php echo $donnees['Nb absences J']; ?></ul>
-                            <ul>nombre d'absences injustifiées : <?php echo $donnees['Nb absences NJ']; ?></ul>
-                        </li>                    
+                    <td><?php echo $res['Nom']; ?>
+                       <li>
+                            <ul>nombre d'absences justifiées : <?php echo $res['absencesJ']; ?></ul>
+                            <ul>nombre d'absences injustifiées : <?php echo $res['absencesNJ']; ?></ul>
+                        </li>
                     </td>
-                    <td><?php echo $donnees['Prénom']; ?></td>
-                    <td><img src="trombi/<?php echo $donnees['photo']; ?>.png"/></td>
-                    <td><input type="checkbox" name="absent" id="absent" /></td>
+                    <td><?php echo $res['prenom']; ?></td>
+                    <td><img src="trombi/<?php echo $res['photo']; ?>.png" title="trombi"/></td>
+                    <td>
+                        <input type="checkbox" name="absent" id="absent" /> 
+                    </td>
                 </tr>
                 <?php
                 }
 
-                $reponse->closeCursor(); // Termine le traitement de la requête
+                mysqli_close($bdd); // Termine le traitement de la requête
                 ?>
+
             </tbody>
         </table>
-        <form method="POST" action="verif.php"><input type="submit" value="envoyer" /></form>        
+        <input type="submit" class="btn btn-success" value="envoyer" /></form>
         <!--bouton de déconnexion : voir à créer un pop-up "êtes-vous sûr"-->
-       <form method="POST" action="accueil.php">
-            <input type="submit" value="déconnexion" />
-        </form>
-        <form method="POST" action="faq.html"><input type="submit" value="FAQ" /></form>
+        <a class="btn btn-outline-primary" href="deconnect.php" role="button">Déconnexion</a>
 
+        <a class="btn btn-outline-warning" href="faq.html" role="button">FAQ</a>
     </body>
 
 
