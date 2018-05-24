@@ -36,7 +36,6 @@
                 <?php
                 $reponse = $bdd->prepare('SELECT * FROM bdd_promo.etudiant WHERE login=?');
                 $reponse->execute(array($_SESSION['login']));
-      
                 while ($donnees = $reponse->fetch())    
                 {
                 ?>
@@ -52,12 +51,20 @@
                 ?>
             </tbody>
         </table>
-        <!--bouton de déconnexion : voir à créer un pop-up "êtes-vous sûr"-->
-       <form method="POST" action="accueil.php">
-            <input type="submit" value="déconnexion" />
-        </form>
-        <form method="POST" action="faq.html"><input type="submit" value="FAQ" /></form>
-
+        <script>
+        function Deconnexion ()
+        {
+        function RedirigeDeconnexion()
+        {
+        document.location.href="deconnect.php"; 
+        }
+        if (confirm("Etes-vous sûr de vouloir vous déconnecter ?")) 
+            {
+                RedirigeDeconnexion();
+            }
+        }
+        </script>
+         <button onclick="Deconnexion()">Deconnexion</button> 
     </body>
 
 
