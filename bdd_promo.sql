@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS `etudiant` (
   `login` text CHARACTER SET utf8 COLLATE utf8_bin,
   `MDP` text,
   `Groupe` int(11) NOT NULL,
-  `presencetemp` int NOT NULL
+  `presencetemp` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
