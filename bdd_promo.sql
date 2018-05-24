@@ -34,11 +34,12 @@ CREATE TABLE IF NOT EXISTS `absences` (
   `j` int(11) DEFAULT NULL,
   `nj` int(11) DEFAULT NULL,
   `loginprof` text NOT NULL,
-  `date` datetime NOT NULL
+  `date` datetime NOT NULL,
+  `id_abs` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-INSERT INTO `absences` (`loginetu`, `j`, `nj`, `loginprof`) VALUES
-('test', '2', '1', 'Prof');
+INSERT INTO `absences` (`loginetu`, `j`, `nj`, `loginprof`,`id_abs`) VALUES
+('test', '0', '1', 'Prof',01);
 COMMIT;
 -- --------------------------------------------------------
 
