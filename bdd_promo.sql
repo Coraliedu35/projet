@@ -79,6 +79,7 @@ CREATE TABLE IF NOT EXISTS `etudiant` (
 -- Déchargement des données de la table `etudiant`
 --
 
+
 INSERT INTO `etudiant` (`Nom`, `Prénom`, `id_promo`, `photo`, `login`, `MDP`, `Groupe`) VALUES
 ('Briand-Goudet', 'Loetis', 'FI1A', 'loetisb', NULL, NULL, 1),
 ('Barreau', 'Pierre', 'FI1A', 'pierreb', NULL, NULL, 1),
@@ -103,7 +104,6 @@ INSERT INTO `etudiant` (`Nom`, `Prénom`, `id_promo`, `photo`, `login`, `MDP`, `
 ('Maulnier', 'Leopold', 'FI1A', 'leopoldm', NULL, NULL, 1),
 ('Metayer', 'Coralie', 'FI1A', 'coraliem', NULL, '12345', 1),
 ('Miché', 'Paul', 'FI1A', 'paulm', NULL, NULL, 1),
-('Militao', 'Sarah', 'FI1A', 'sarahm', NULL, NULL, 1),
 ('Morvan', 'Alan', 'FI1A', 'alanm', NULL, NULL, 1),
 ('Mouazan', 'Morgann', 'FI1A', 'morgannm', NULL, NULL, 1),
 ('Ndao', 'Mouhamed', 'FI1A', 'mouhamedn', NULL, NULL, 1),
@@ -119,9 +119,49 @@ INSERT INTO `etudiant` (`Nom`, `Prénom`, `id_promo`, `photo`, `login`, `MDP`, `
 ('Trinquart', 'Kilian', 'FI1A', 'kiliant', NULL, NULL, 1),
 ('Vetele', 'Ewen', 'FI1A', 'ewenv', NULL, NULL, 2),
 ('test', 'test', 'FI1A', 'test', '123', '123', 1),
-('Vanherzeele', 'Jacques', 'FI1A', 'jacquesv', NULL, NULL, 2),
-('Macé', 'Louise', 'FA1A', 'louisem', NULL, NULL, 1),
-('Martyn', 'Marie', 'FA1A', 'mariem', NULL, NULL, 1);
+('Macé', 'Louise', 'FA1A', 'louisem', NULL, NULL, 2),
+('Martyn', 'Marie', 'FA1A', 'mariem', NULL, NULL, 1),
+('Chaffotec', 'Adrien', 'FA1A', 'adrienc', NULL, NULL, 1),
+('Conqueur', 'Nina', 'FA1A', 'ninac', NULL, NULL, 1),
+('Debray', 'Rémi', 'FA1A', 'remid', NULL, NULL, 1),
+('Fabre', 'Maël', 'FA1A', 'maelf', NULL, NULL, 1),
+('Georget', 'Florian', 'FA1A', 'floriang', NULL, NULL, 1),
+('Goupil', 'Romain', 'FA1A', 'romaing', NULL, NULL, 1),
+('Gouverith', 'Antoine', 'FA1A', 'antoineg', NULL, NULL, 1),
+('Gueraud', 'Dorian', 'FA1A', 'doriang', NULL, NULL, 1),
+('Guégant', 'Axel', 'FA1A', 'axelg', NULL, NULL, 1),
+('Guillaume', 'Maxime', 'FA1A', 'maximeg', NULL, NULL, 1),
+('Guitton', 'Aloïs', 'FA1A', 'aloisg', NULL, NULL, 1),
+('Koebel', 'Kilian', 'FA1A', 'kiliank', NULL, NULL, 1),
+('Lemoing', 'Pierre', 'FA1A', 'pierrel', NULL, NULL, 1),
+('Marziou', 'Romain', 'FA1A', 'romainm', NULL, NULL, 1),
+('Meunier', 'Claire', 'FA1A', 'clairem', NULL, NULL, 1),
+('Payet', 'Mathieu', 'FA1A', 'mathieup', NULL, NULL, 1),
+('Raynard', 'Paul', 'FA1A', 'paulr', NULL, NULL, 1),
+('Reichert', 'Raphaël', 'FA1A', 'raphaelr', NULL, NULL, 1),
+('Rolland', 'Orlane', 'FA1A', 'orlaner', NULL, NULL, 1),
+('Torres', 'Ken', 'FA1A', 'kent', NULL, NULL, 1),
+('Vaucheret', 'Loïc', 'FA1A', 'loicv', NULL, NULL, 1),
+('Beaufils', 'Eliott', 'FA1A', 'eliottb', NULL, NULL, 2),
+('Boutet', 'Louna', 'FA1A', 'lounab', NULL, NULL, 2),
+('Colineaux', 'Marie', 'FA1A', 'mariec', NULL, NULL, 2),
+('Coste', 'Guillaume', 'FA1A', 'guillaumec', NULL, NULL, 2),
+('Crié', 'Bastien', 'FA1A', 'bastienc', NULL, NULL, 2),
+('Garion', 'Héloïse', 'FA1A', 'heloiseg', NULL, NULL, 2),
+('Guillou', 'Maïwenn', 'FA1A', 'maiwenng', NULL, NULL, 2),
+('Imbeaud', 'Aymeric', 'FA1A', 'aymerici', NULL, NULL, 2),
+('Jannot', 'Killian', 'FA1A', 'killianj', NULL, NULL, 2),
+('Jeusset', 'Mathis', 'FA1A', 'mathisj', NULL, NULL, 2),
+('Jouan', 'Goulwen', 'FA1A', 'goulwenj', NULL, NULL, 2),
+("L'Helgoualc'h", 'Justine', 'FA1A', 'justinel', NULL, NULL, 2),
+('Lamour', 'Mickael', 'FA1A', 'mickaell', NULL, NULL, 2),
+('Lucas', 'Léandre', 'FA1A', 'leandrel', NULL, NULL, 2),
+('Magadur', 'Alexandre', 'FA1A', 'alexandrem', NULL, NULL, 2),
+('Marchand', 'Jean-Baptiste', 'FA1A', 'jbm', NULL, NULL, 2),
+('Meilleur', 'Jérémy', 'FA1A', 'jeremym', NULL, NULL, 2),
+('Menard', 'Mathis', 'FA1A', 'mathism', NULL, NULL, 2),
+('Redouté', 'Thomas', 'FA1A', 'thomasr', NULL, NULL, 2),
+('Vermet', 'Julien', 'FA1A', 'julienv', NULL, NULL, 2);
 
 -- --------------------------------------------------------
 
