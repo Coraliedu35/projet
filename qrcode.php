@@ -1,4 +1,4 @@
 <?php
 	include ("repqr/qrlib.php");
-	QRcode::png("www.google.com");
+	QRcode::png("connect.php");
 ?>
