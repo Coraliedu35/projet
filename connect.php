@@ -1,19 +1,13 @@
 <?php
 session_start (); // on démarre la session
-    try
-    {
-        $bdd = new PDO('mysql:host=localhost;dbname=bdd_promo;charset=utf8', 'root', '', // connexion à la BDD
-        array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); 
-    }
-    catch (Exception $e)
-    {
-        die('Erreur : ' . $e->getMessage());
-    }
+$login=$_POST['login'];
+$mdp=$_POST['mdp'];
+include('bdd_connect.php');
     //Première étape : Authentification d'un enseignant
     $verif_login = $bdd->prepare('SELECT COUNT(*) FROM bdd_promo.personnel WHERE login = ?'); //On vérifie que le login existe dans la table
     $verif_login->execute(array($_POST['login']));
     // Si le login rentré correspond à un login d'enseignant
-    if($verif_login->fetchColumn() != 0) 
+    if($verif_login->fetchColumn() != 0)  
         {    
         // Sélection du password pour le login saisi
         $verif_mdp = $bdd->prepare('SELECT MDP FROM bdd_promo.personnel WHERE login = ? LIMIT 1'); // Préparation de la requête
@@ -23,7 +17,7 @@ session_start (); // on démarre la session
                 //on stocke les variables dans les variables de session
                 $_SESSION['login']=$_POST['login'];
                 $_SESSION['mdp']=$_POST['mdp'];
-                $verif_mdp->closeCursor(); // Termine le traitement de la requête login 
+                $verif_mdp->closeCursor(); // Termine le traitement de la requête mdp
                 header('Location: pageprof.php'); //on dirige vers la page principale
             }
         else
@@ -31,9 +25,10 @@ session_start (); // on démarre la session
                 header('Location: accueil.php'); //On renvoie vers la page d'accueil
                 $verif_mdp->closeCursor(); // Termine le traitement de la requête login 
                 $_SESSION['essais']=$_SESSION['essais']+1;
+                
             }
         }
-    // Si le login ne correspond pas à un login d'enseignant
+     //Si le login ne correspond pas à un login d'enseignant
      else 
         {
             //On vérifie que le login existe dans la table étudiant
