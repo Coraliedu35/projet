@@ -38,7 +38,8 @@ img[title="logo2"]{
 	width:300px;
 	height:90px;
 	float:right;
+
 }
 
-td li{display:none;}
-td:hover li{display:block;}
+fieldset { text-align : center; }
+#choix_promo input {width: 20%; height: 30%}
