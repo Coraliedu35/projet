@@ -18,7 +18,7 @@ include('bdd_connect.php');
                 $_SESSION['login']=$_POST['login'];
                 $_SESSION['mdp']=$_POST['mdp'];
                 $verif_mdp->closeCursor(); // Termine le traitement de la requête mdp
-                header('Location: pageprof.php'); //on dirige vers la page principale
+                header('Location: choix_promo.php'); //on dirige vers la page principale
             }
         else
             {
