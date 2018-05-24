@@ -37,6 +37,9 @@ CREATE TABLE IF NOT EXISTS `absences` (
   `date` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+INSERT INTO `absences` (`loginetu`, `j`, `nj`, `loginprof`) VALUES
+('test', '2', '1', 'Prof');
+COMMIT;
 -- --------------------------------------------------------
 
 --
