@@ -38,8 +38,8 @@ CREATE TABLE IF NOT EXISTS `absences` (
   `id_abs` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-INSERT INTO `absences` (`loginetu`, `j`, `nj`, `loginprof`,`id_abs`) VALUES
-('test', '0', '1', 'Prof',01);
+INSERT INTO `absences` (`loginetu`, `j`, `nj`, `loginprof`,`date`,`id_abs`) VALUES
+('test', '0', '1', 'Prof','2019-03-15 08:14:37','01');
 COMMIT;
 -- --------------------------------------------------------
 
