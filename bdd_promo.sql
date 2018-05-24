@@ -33,7 +33,8 @@ CREATE TABLE IF NOT EXISTS `absences` (
   `loginetu` text NOT NULL,
   `j` int(11) DEFAULT NULL,
   `nj` int(11) DEFAULT NULL,
-  `loginprof` text NOT NULL
+  `loginprof` text NOT NULL,
+  `date` datetime NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
