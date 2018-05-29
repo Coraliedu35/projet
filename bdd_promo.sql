@@ -55,13 +55,11 @@ INSERT INTO `absences` (`loginetu`, `j`, `nj`, `loginprof`, `date`, `id_abs`) VA
 DROP TABLE IF EXISTS `cours`;
 CREATE TABLE IF NOT EXISTS `cours` (
   `Matière` text CHARACTER SET utf8 NOT NULL,
-  `Prof` text CHARACTER SET utf8 NOT NULL,
   `id_prof` int(11) NOT NULL,
-  `id_promo` int(11) NOT NULL,
+  `id_promo` text CHARACTER SET utf8 NOT NULL,
   `salle` text CHARACTER SET utf8 NOT NULL,
-  `Heure` time(4) NOT NULL,
-  `Date` date NOT NULL,
-  `badge` int(11) NOT NULL
+  `Horaire` datetime NOT NULL,
+  `qrcode` text CHARACTER SET utf8 NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
