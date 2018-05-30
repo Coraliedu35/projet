@@ -1,0 +1,3 @@
+import urllib.request
+url='https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/cal.jsp?data=8241fc387320021409a58a8e4fefa7b2a4e075bf539f072d5d4b66c94061b8e8324cfcf2e9e6b43519d88ab8a57dabacf43b49ed91b3cccdb0db0d7caf18783a892961fa6d01b62cc27bb0c132f06ccd29d569558fe3e2970978635ef2599992'
+urllib.request.urlretrieve(url,'./calendrier.ics')
