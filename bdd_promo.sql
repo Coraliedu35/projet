@@ -58,7 +58,8 @@ CREATE TABLE IF NOT EXISTS `cours` (
   `id_prof` int(11) NOT NULL,
   `id_promo` text CHARACTER SET utf8 NOT NULL,
   `salle` text CHARACTER SET utf8 NOT NULL,
-  `horaire` datetime NOT NULL,
+  `debut` datetime NOT NULL,
+  `fin` datetime NOT NULL,
   `id_cours` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
