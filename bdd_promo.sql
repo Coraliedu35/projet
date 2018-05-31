@@ -76,6 +76,8 @@ CREATE TABLE IF NOT EXISTS `qrcode`(
   `qr` text CHARACTER SET utf8 NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET = latin1;
 
+INSERT INTO `qrcode` (`horaire`,`id_cours`,`qr`) VALUES ('2018-05-31 08:14:00','2','abcdefghijklmnopqrstuvwxyz0123456789');
+
 --
 -- Structure de la table `etudiant`
 --
