@@ -6,9 +6,11 @@
 	$promo=$_GET['promo'];
 	$char = 'abcdefghijklmnopqrstuvwxyz0123456789'; //permet d'avoir une variable GET aléatoire afin de ne pas pouvoir connaître le lien à l'avance
 	$v = str_shuffle($char);
+	$date=date('Y-m-d H:i');
+	$date=date_modify($date,'+2 H' );
 
-	$req = $bdd->prepare("INSERT INTO `cours` (`Matière`, `id_prof`, `id_promo`,`salle`,`Horaire`,`qrcode`) VALUES ('Maths',:login,:promo,'TD3','2019-04-17 10:14:37',:qr)");
-	$req->execute(array('login'=>$log,'promo'=>$promo,'qr'=>$v));
+	$req = $bdd->prepare("INSERT INTO `qrcode` (`horaire`, `id_cours`, `qr`) VALUES (:dt,'1',:qr)");
+	$req->execute(array('dt'=>$date,'qr'=>$v));
 
 	QRcode::png("validation.php?v=$v");
 ?>
