@@ -58,11 +58,22 @@ CREATE TABLE IF NOT EXISTS `cours` (
   `id_prof` int(11) NOT NULL,
   `id_promo` text CHARACTER SET utf8 NOT NULL,
   `salle` text CHARACTER SET utf8 NOT NULL,
-  `Horaire` datetime NOT NULL,
-  `qrcode` text CHARACTER SET utf8 NOT NULL
+  `horaire` datetime NOT NULL,
+  `id_cours` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
+
+--
+-- Structure de la table `qrcode`
+-- 
+
+DROP TABLE IF EXISTS `qrcode`;
+CREATE TABLE IF NOT EXISTS `qrcode`(
+  `horaire` datetime NOT NULL,
+  `id_cours` text CHARACTER SET utf8 NOT NULL,
+  `qr` text CHARACTER SET utf8 NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET = latin1;
 
 --
 -- Structure de la table `etudiant`
