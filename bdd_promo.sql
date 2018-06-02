@@ -76,8 +76,6 @@ CREATE TABLE IF NOT EXISTS `qrcode`(
   `qr` text CHARACTER SET utf8 NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET = latin1;
 
-INSERT INTO `qrcode` (`horaire`,`id_cours`,`qr`) VALUES ('2018-05-31 08:14:00','2','abcdefghijklmnopqrstuvwxyz0123456789');
-
 --
 -- Structure de la table `etudiant`
 --
@@ -201,7 +199,18 @@ CREATE TABLE IF NOT EXISTS `personnel` (
 --
 
 INSERT INTO `personnel` (`Nom`, `Prénom`, `login`, `MDP`, `id_prof`) VALUES
-('Prof', 'Prof', '1234', '1234', 0);
+('Prof', 'Prof', '1234', '1234', 0),
+('BARA', 'YANN', 'baray', NULL, 1),
+('ABGRALL', 'CHRISTOPHE', 'abgrallc', NULL, 2),
+('BEUCHER', 'LAURENT', 'beucherl', NULL, 3),
+('PRIGENT', 'ANNE', 'prigenta', NULL, 4),
+('GATEL', 'DAVID', 'gateld', NULL, 5),
+('TABOURET', 'MICHEL', 'tabouretm', NULL, 6),
+('DUMONT', 'FABIENNE', 'dumontf', NULL, 7),
+('PASQUET', 'MAXINE', 'pasquetm', NULL, 8),
+('FEREY', 'PHILIPPE', 'fereyp', NULL, 9),
+('MORVAN', 'LAURENT', 'morvanl', NULL, 10),
+('HUART', 'DEBORAH', 'huartd', NULL, 11);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
