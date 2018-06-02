@@ -17,6 +17,7 @@
 	preg_match_all($regExpProf, $edt, $tabProf, PREG_PATTERN_ORDER);
 	preg_match_all($regExpSalle, $edt, $tabSalle, PREG_PATTERN_ORDER);
 
+	$del=$bdd->query('DELETE FROM `cours`');							//vide la table pour la MàJ
 	$id=0;
 	/*boucle pour chaque paragraphe event du fichier*/
 	for ($i=0 ; $i < $l ; ++$i)
