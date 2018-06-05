@@ -8,8 +8,8 @@
         <link rel="stylesheet" href="style.css" />
     </header>
     <?php
-        $id_cours= /*$_SESSION['id_cours']*/ 1;
-        $id_promo= /*$_SESSIOn['id_promo']*/ "FI1A";
+        $id_cours= $_SESSION['id_cours'];
+        $id_promo= $_SESSIOn['id_promo'];
         $reponse = $bdd->prepare('SELECT * FROM bdd_promo.etudiant WHERE etudiant.presencetemp = 0 AND etudiant.id_promo = ?');                                  //On récupère le contenu du tableau etudiant de la bdd
         $reponse->execute(array($id_promo));
         while ($donnees = $reponse->fetch())
