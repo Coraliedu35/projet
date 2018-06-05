@@ -1,39 +1,36 @@
+<?php
+        session_start();
+        include('bdd_connect.php');
+?>
 <!DOCTYPE html>
 <html>
     <header>
         <link rel="stylesheet" href="style.css" />
     </header>
     <?php
-        session_start();
-        include('bdd_connect.php');
-
-        $reponse = $bdd->query('SELECT * FROM bdd_promo.etudiant order by Nom');                                  //On récupère le contenu du tableau etudiant de la bdd
+        $id_cours= /*$_SESSION['id_cours']*/ 1;
+        $id_promo= /*$_SESSIOn['id_promo']*/ "FI1A";
+        $reponse = $bdd->prepare('SELECT * FROM bdd_promo.etudiant WHERE etudiant.presencetemp = 0 AND etudiant.id_promo = ?');                                  //On récupère le contenu du tableau etudiant de la bdd
+        $reponse->execute(array($id_promo));
         while ($donnees = $reponse->fetch())
         {
             if ($donnees['presencetemp'] == 0) 
             {
     ?>
-
         <img src="<?php echo $donnees['photo']; ?>.jpg" alt="photo_etudiant"/>
-        <?php
+    <?php
                 echo $donnees['Nom']." ";
                 echo $donnees['Prénom'];
             }
-        ?>
+    ?>
         <form method="post" action="trombi.php">
            <p>
                <select name="etat" >
-                   <option value="2">Abscence justifié</option>
-                   <option value="3">Abscence injustifié</option>
+                   <option value="2">Absence justifiée</option>
+                   <option value="3">Absence injustifiée</option>
                    <option value="4">Retard</option>
                </select>
            </p>
         </form>
-        <?php
-            $login= $donnees['Nom'];
-            $presencetemp= $_POST['etat'];
-            $req = $bdd->prepare('UPDATE bdd_promo.etudiant SET `presencetemp` = ? WHERE login = ?');
-            $req->execute(array($presencetemp, $login));
-        }
-        ?>
+        <?php } ?>
 </html>
