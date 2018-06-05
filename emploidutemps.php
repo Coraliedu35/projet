@@ -1,7 +1,7 @@
 <?php
 	include('bdd_connect.php');																		//connexion à la bdd
 	session_start();
-	$edt = file_get_contents('edt/ADECal (2).ics');														//récupération du fichier calendrier
+	$edt = file_get_contents('edt/ADECal.ics');														//récupération du fichier calendrier
 
 	/*Utilisation d'expressions régulières afin de récupérer les lignes qui nous intéressent*/
 	$regExpMatiere = '/'.'SUMMARY:(.*)'.'/';														//Les '/' sont des délimiteurs
@@ -17,7 +17,7 @@
 	preg_match_all($regExpProf, $edt, $tabProf, PREG_PATTERN_ORDER);
 	preg_match_all($regExpSalle, $edt, $tabSalle, PREG_PATTERN_ORDER);
 
-	$del=$bdd->query('DELETE FROM `cours`');							//vide la table pour la MàJ
+	$del=$bdd->query('DELETE FROM `cours`');
 	$id=0;
 	/*boucle pour chaque paragraphe event du fichier*/
 	for ($i=0 ; $i < $l ; ++$i)
@@ -86,5 +86,5 @@
 		$req = $bdd->prepare("INSERT INTO `cours` (`Matière`, `id_prof`, `id_promo`,`salle`,`debut`,`fin`,`id_cours`) VALUES (:mat,:prof,:promo,:salle,:debut,:fin,:id)");
 		$req->execute(array('mat'=>$matiere,'prof'=>$idpr,'promo'=>$promo,'salle'=>$salle,'debut'=>$hordebut,'fin'=>$horfin,'id'=>$id));
 	}
-
+	$req = $bdd->query("INSERT INTO `cours` (`Matière`, `id_prof`, `id_promo`,`salle`,`debut`,`fin`,`id_cours`) VALUES ('test','0','FI1G1','TD6','2018-06-05 11:10:00','2018-06-05 13:10:00','99')");
 ?>
