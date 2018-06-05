@@ -210,7 +210,8 @@ INSERT INTO `personnel` (`Nom`, `Prénom`, `login`, `MDP`, `id_prof`) VALUES
 ('PASQUET', 'MAXINE', 'pasquetm', NULL, 8),
 ('FEREY', 'PHILIPPE', 'fereyp', NULL, 9),
 ('MORVAN', 'LAURENT', 'morvanl', NULL, 10),
-('HUART', 'DEBORAH', 'huartd', NULL, 11);
+('HUART', 'DEBORAH', 'huartd', NULL, 11),
+('PARIZE', 'LAURENT', 'parizel', NULL, 11);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
