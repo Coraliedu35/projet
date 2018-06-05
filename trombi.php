@@ -17,20 +17,15 @@
             if ($donnees['presencetemp'] == 0) 
             {
     ?>
-        <img src="<?php echo $donnees['photo']; ?>.jpg" alt="photo_etudiant"/>
+        <img class='trombi' src="<?php echo $donnees['photo']; ?>.jpg" alt="photo_etudiant"/>
     <?php
                 echo $donnees['Nom']." ";
                 echo $donnees['Prénom'];
             }
     ?>
-        <form method="post" action="trombi.php">
-           <p>
-               <select name="etat" >
-                   <option value="2">Absence justifiée</option>
-                   <option value="3">Absence injustifiée</option>
-                   <option value="4">Retard</option>
-               </select>
-           </p>
+        <form method="post" action="corrige.php">
+            <input type="text" name="present" value="<?php echo $donnees['login'] ?>" class="cache" />
+            <input type="submit" value="Présent"/>
         </form>
         <?php } ?>
 </html>
