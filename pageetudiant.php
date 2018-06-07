@@ -22,11 +22,13 @@
                 <tr>
                     <td>Absences justifiées </td>
                     <td>Absence injustifiées</td>
-                    <td>Absences totales</td>
+                    <td>Date</td>
                 </tr>
             </thead>
             <tbody>
                 <?php
+                $jtotal=0;
+                $njtotal=0;
                 $reponse = $bdd->prepare('SELECT * FROM bdd_promo.etudiant,bdd_promo.absences WHERE etudiant.login=? AND etudiant.login=absences.loginetu');
                 $reponse->execute(array($_SESSION['login']));
                 while ($res =$reponse->fetch())    
@@ -35,12 +37,17 @@
                 <tr>
                     <td><?php echo $res['j']; ?></td>
                     <td><?php echo $res['nj']; ?></td>
-                    <td><?php echo $res['nj']+$res['j']; ?></td>
+                    <td><?php echo $res['date']; ?></td>
                 </tr>
                 <?php
+                    $jtotal = $res['j']+$jtotal;
+                    $njtotal=$res['nj']+$njtotal;
                 }
                 $reponse->closeCursor();                                                //Termine le traitement de la requête
                 ?>
+                <tr>
+                    <td><?php echo $jtotal; ?></td>
+                    <td><?php echo $njtotal; ?></td>
             </tbody>
         </table>
         <a class="btn btn-outline-warning" href="modifs.php" role="button">Paramètres du compte</a>
