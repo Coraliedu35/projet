@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `absences` (
   `nj` int(11) DEFAULT NULL,
   `loginprof` text NOT NULL,
   `date` datetime NOT NULL,
-  `id_abs` int(11) NOT NULL
+  `id_abs` INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS `cours` (
   `salle` text CHARACTER SET utf8 NOT NULL,
   `debut` datetime NOT NULL,
   `fin` datetime NOT NULL,
-  `id_cours` int(11) NOT NULL
+  `id_cours` INTEGER NOT NULL AUTO_INCREMENT PRIMARY KEY
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
