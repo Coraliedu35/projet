@@ -8,17 +8,17 @@
     {        
         exit('trop de tentatives');
     }   
-    echo $_SESSION['essais']; //debug
-    ?>
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
+        <link rel="shortcut icon" type="image/x-icon" href="logo3.png" />
         <title>Gestion des absences : authentification</title>
     </head>
     <body>
-        <header> Département R&T FI1A </header>
+        <header>IUT de Saint-Malo</header>
         <h1>Gestion des absences</h1>
          <!--formulaire qui envoie les information vers le script d'authentification : login et mdp-->
         <form method="post" action="connect.php">
