@@ -8,7 +8,7 @@
      <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
         <title>Enseignant</title>
     </head>
     <body>
@@ -113,11 +113,11 @@
                     }
                 }
         </script>
-        <button class="btn btn-outline-primary" href="deconnect.php" onclick="Deconnexion()">Déconnexion</button>
+        <button class="btn-warning btn-outline" href="deconnect.php" onclick="Deconnexion()">Déconnexion</button>
 
-        <a class="btn btn-outline-warning" href="faq.html" role="button">FAQ</a>
+        <a class="btn-warning btn-outline" href="faq.php" role="button">FAQ</a>
 
-        <a class="btn btn-outline-warning" href="modifs.php" role="button">Paramètres du compte</a>
+        <a class="btn-warning btn-outline" href="modifs.php" role="button">Paramètres du compte</a>
     </body>
 
 
