@@ -65,7 +65,7 @@ include('bdd_connect.php');
             }
         else
             {
-                header('Location: accueil.php');            //On renvoie vers la page d'accueil
+                header('Location: index.php');            //On renvoie vers la page d'accueil
                 $verif_mdp->closeCursor();                  // Termine le traitement de la requête login 
                 $_SESSION['essais']=$_SESSION['essais']+1;
                 
@@ -94,7 +94,7 @@ include('bdd_connect.php');
                     }
                 else
                 {
-                    header('Location: accueil.php'); // Si il manque login ou mdp, on renvoie vers la page d'accueil
+                    header('Location: index.php'); // Si il manque login ou mdp, on renvoie vers la page d'accueil
                     $verif_mdp->closeCursor(); // Termine le traitement de la requête mdp
                     $_SESSION['essais']=$_SESSION['essais']+1;
                 }  
@@ -104,7 +104,7 @@ include('bdd_connect.php');
             {
                 $_SESSION['essais']=$_SESSION['essais']+1;
                 $verif_login->closeCursor(); // Termine le traitement de la requête mdp
-                header('Location: accueil.php'); // Si il manque login ou mdp, on renvoie vers la page d'accueil
+                header('Location: index.php'); // Si il manque login ou mdp, on renvoie vers la page d'accueil
                 
             }
         }
