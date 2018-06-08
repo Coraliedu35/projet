@@ -20,7 +20,7 @@
             if ($donnees['presencetemp'] == 0) 
             {
     ?>
-        <img class='trombi' src="<?php echo $donnees['photo']; ?>.jpg" alt="photo_etudiant"/>
+        <img class='trombi' src="trombi/<?php echo $donnees['photo']; ?>.jpg" alt="photo_etudiant"/>
     <?php
                 echo $donnees['Nom']." ";
                 echo $donnees['Prénom'];
@@ -40,7 +40,7 @@
             if ($donnees['presencetemp'] == 0) 
             {
     ?>
-        <img class='trombi' src="<?php echo $donnees['photo']; ?>.jpg" alt="photo_etudiant"/>
+        <img class='trombi' src="<?php echo $donnees['photo']; ?>.png" alt="photo_etudiant"/>
     <?php
                 echo $donnees['Nom']." ";
                 echo $donnees['Prénom'];
