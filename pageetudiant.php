@@ -11,13 +11,13 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="shortcut icon" type="image/x-icon" href="logo3.png" />
         <title>Statistiques d'absence</title>
     </head>
     <body>
         <header> IUT de Saint-Malo </header>
         <h1>Statistiques individuelles d'absence</h1>
-        <table align="center">
+        <table id="b" align="center">
             <thead>
                 <tr>
                     <td>Absences justifiées </td>
@@ -66,7 +66,7 @@
                     }
                 }
         </script>
-        <button class="btn btn-outline-primary" onclick="Deconnexion()">Deconnexion</button> 
+        <button class="btn-warning btn-outline" onclick="Deconnexion()">Deconnexion</button> 
     </body>
 
 </html>
