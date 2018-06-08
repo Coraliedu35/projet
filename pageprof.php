@@ -19,7 +19,7 @@
         <h1>Feuille d'absence</h1>
         <h4><a href="trombi.php">Trombi des étudiants manquants</a></h4>
         <form method="POST" action="verif.php">
-            <a href="qrcode.php?c=<?php echo $cours;?>">Lien QR </a>
+            <a href="qrcode.php?c=<?php echo $cours;?>" target="_blank">Lien QR </a>
 
                 <?php
                 /*traitement de la chaîne de caractère, identification promo*/
@@ -27,7 +27,6 @@
                 $rep->execute(array($cours));
                 while($res=$rep->fetch()){
                     $promo=$res['id_promo'];
-
                     /*cours en groupe*/
                     if(strlen($promo)==5){
                         $gr=substr($promo,-1);
@@ -42,6 +41,7 @@
                         $reponse = $bdd->prepare('SELECT * FROM bdd_promo.etudiant WHERE id_promo = ? ORDER BY Nom');
                         $reponse->execute(array($promo));
                     }
+                    $_SESSION['id_promo']=$promo;
                 }
                 ?>
             <table align="center">
