@@ -1,43 +1,145 @@
-header
+*{margin:0; padding:0;}
+
+body
 {
-	font-size: 50px;
+	background-image: url("IUT.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+header{
+	font-size: 75px;
 	font-weight:bold;
 	text-align: center;
-	color:#BBD2E2;
-	background-color: #005998;
+	color: #FFFFFF;
+	background-color: #1db8ed;
+	top: 5px;
 }
+
 h1
 {
 	text-align: center;
 	color:#EE7B00;
+	padding-top: 50px;
+	font-size: 50px;
 }
+
+h2
+{
+	text-align: center;
+	color:#EE7B00;
+	padding-top: 50px;
+	font-size: 30px;
+ }
+
 
 table
 {
-	border-collapse:separate;
+	border-collapse: separate;
 	border: 15px solid #005998;
 	align-items: center;
 	left: 100px;
 	
 }
+
 td
 {
 	border:1px solid black;
 	text-align: center;
 }
+
 td li{display:none;}
+
 td:hover li{display:block;}
 
-body
-{
 
-}
 p
 {
 	text-align: center;
+	font-size: 18px;
 }
+
 img[title="logo2"]{
 
+	width:300px;
+	height:90px;
+	float:right;
+}
+
+img[title="trombi"]{
+	width:50px;
+	height: 50px;
+}
+
+fieldset { 
+	text-align : center;
+	background-image: url("gris.jpg");
+}
+
+fieldset input{
+	margin-top: 5px;
+}
+
+#choix_promo input {width: 20%; height: 30%}
+
+form#login
+{
+	padding-top: 50px;
+	padding-left: 500px;
+	padding-right: 500px;
+}
+
+.btn-outline {
+	text-decoration: none;
+	border:2px solid #1db8ed;
+    background-color: transparent;
+    color: inherit;
+    transition: all 1s ease-out;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+.btn-warning.btn-outline 
+{
+    color: #1db8ed;
+}
+.btn-warning.btn-outline:hover
+{
+	background-color: #1db8ed;
+	color: #fff;
+}
+
+form#mod
+{
+	padding-top: 50px;
+	padding-left: 500px;
+	padding-right: 500px;
+}
+
+.cache
+{
+	visibility: hidden;
+}
+
+
+
+#azerty
+{
+	visibility: hidden;
+}
+
+p.#azerty:hover
+{
+	visibility: visible;
+}
+
+
+h4
+{
+	font-size: 30px;
+	text-decoration: none;
+}
 	width:300px;
 	height:90px;
 	float:right;
