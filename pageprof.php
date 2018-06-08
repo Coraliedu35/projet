@@ -8,7 +8,7 @@
      <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
-        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">-->
+        <link rel="shortcut icon" type="image/x-icon" href="logo3.png" />
         <title>Enseignant</title>
     </head>
     <body>
@@ -18,7 +18,6 @@
         <header> IUT de Saint-Malo </header>
         <h1>Feuille d'absence</h1>
         <h4><a href="trombi.php">Trombi des étudiants manquants</a></h4>
-        <form method="POST" action="verif.php">
             <h4><a href="qrcode.php?c=<?php echo $cours;?>" target="_blank">Lien QR </a></h4>
 
                 <?php
@@ -44,7 +43,7 @@
                     $_SESSION['id_promo']=$promo;
                 }
                 ?>
-            <table align="center">
+            <table id="b">
                 <thead>
                     <tr>
                         <td colspan="3"="3">Promotion</td>
