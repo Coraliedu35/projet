@@ -98,8 +98,6 @@
 
             </tbody>
         </table>
-        <input type="submit" class="btn btn-success" value="envoyer" /></form>
-        <!--bouton de déconnexion : voir à créer un pop-up "êtes-vous sûr"-->
         <script>
                 function Deconnexion ()
                 {
