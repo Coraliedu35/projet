@@ -15,11 +15,11 @@
         <title>Paramètres de compte</title>
     </head>
     <body>
-        <header>IUT de Saint-Malo</header>
+        <header> IUT de Saint-Malo </header>
 
 
         <fieldset>
-        <form id="mod" method="POST" action="update.php">
+        <form method="POST" action="update.php">
             <legend>Modification du mot de passe</legend>
             <input type="password" name="mdp1" placeholder="ancien mot de passe"><br>
             <input type="password" name="mdpmodif" placeholder="nouveau mot de passe"><br>
