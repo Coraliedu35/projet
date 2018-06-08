@@ -11,22 +11,22 @@
     <head>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="shortcut icon" type="image/x-icon" href="logo3.png" />
         <title>Paramètres de compte</title>
     </head>
     <body>
-        <header> IUT de Saint-Malo </header>
+        <header>IUT de Saint-Malo</header>
 
 
         <fieldset>
-        <form method="POST" action="update.php">
+        <form id="mod" method="POST" action="update.php">
             <legend>Modification du mot de passe</legend>
             <input type="password" name="mdp1" placeholder="ancien mot de passe"><br>
             <input type="password" name="mdpmodif" placeholder="nouveau mot de passe"><br>
             <input type="submit" class="btn btn-success" value="envoyer" />
         </form>
         </fieldset> 
-        <a class="btn btn-outline-warning" href="pageetudiant.php" role="button">Retour</a>
+        <a class="btn-warning btn-outline" href="pageetudiant.php" role="button">Retour</a>
 
     </body>
 </html>
