@@ -19,7 +19,7 @@
         <h1>Feuille d'absence</h1>
         <h4><a href="trombi.php">Trombi des étudiants manquants</a></h4>
         <form method="POST" action="verif.php">
-            <a href="qrcode.php?c=<?php echo $cours;?>" target="_blank">Lien QR </a>
+            <h4><a href="qrcode.php?c=<?php echo $cours;?>" target="_blank">Lien QR </a></h4>
 
                 <?php
                 /*traitement de la chaîne de caractère, identification promo*/
