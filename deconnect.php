@@ -5,5 +5,5 @@
 	unset($_SESSION['mdp']);
 	unset($_SESSION['essais']);
 	session_destroy(); // le script quitte la session
-    header('Location: connect.php'); // redirection vers la page d'accueil    
+    header('Location: index.php'); // redirection vers la page d'accueil    
 ?>
